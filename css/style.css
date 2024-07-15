@@ -1,0 +1,279 @@
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+
+button {
+  margin-top: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.header {
+  background-color: #ffcc00;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.header h1 {
+  margin: 10px;
+  color: #333;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  background-color: #333;
+}
+
+.nav a {
+  color: white;
+  padding: 14px 20px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.nav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.container {
+  padding: 70px;
+  flex: 1;
+}
+
+.featured-items {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+
+.featured-items h2 {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.featured-item {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+  text-align: center;
+  margin: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: calc(33% - 20px);
+}
+
+.featured-item img {
+  margin-top: 10px;
+  width: 100%;
+  max-width: 300px;
+  height: 100%;
+  max-height: 300px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.featured-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.containers {
+  display: flex;
+  flex: 1;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 70px;
+}
+
+.menu-item {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  margin: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: calc(33% - 20px);
+}
+
+.menu-item img {
+  margin-top: 10px;
+  width: 100%;
+  max-width: 300px;
+  height: 100%;
+  max-height: 300px;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+}
+
+.menu-item:hover {
+  transform: scale(1.02);
+  background-color: rgb(172, 172, 172);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.menu-item button {
+  margin-bottom: 10px;
+  background-color: #ffcc00;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.menu-item button:hover {
+  background-color: #ff9900;
+}
+
+.cart {
+  border-top: 1px solid #ddd;
+  padding-top: 20px;
+  margin-top: 20px;
+}
+
+.cart ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.cart li {
+  padding: 5px;
+  border-bottom: 1px solid #ddd;
+}
+
+.cart button {
+  margin-top: 10px;
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.cart button:hover {
+  background-color: #ff3333;
+}
+
+.cart ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0;
+}
+
+.cart ul li button {
+  margin-left: 10px;
+}
+
+form {
+  margin-top: 20px;
+}
+
+form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+form input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+form button {
+  background-color: #ffcc00;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+form button:hover {
+  background-color: #ff9900;
+}
+
+footer {
+  text-align: center;
+  padding: 10px 0;
+  background-color: #333;
+  color: white;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.about-us,
+.contact-us {
+  margin-bottom: 50px;
+}
+
+.about-us h2,
+.contact-us h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.about-us p,
+.contact-us p {
+  text-align: center;
+  margin: 0 0 10px 0;
+  color: #555;
+}
+
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav a {
+    padding: 15px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .container {
+    padding: 10px;
+  }
+
+  .featured-item, .menu-item {
+    width: calc(100% - 20px);
+    margin: 10px;
+  }
+
+  .menu-item img,
+  .featured-item img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .cart ul li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cart ul li button {
+    align-self: flex-end;
+  }
+
+  button {
+    width: 100%;
+  }
+}

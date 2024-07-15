@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Place Order</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="header">
+    <h1>Place Your Order</h1>
+  </div>
+  <div class="nav">
+    <a href="/">Home</a>
+    <a href="/menu">Menu</a>
+    <a href="/order">Order</a>
+  </div>
+  <div class="container">
+    <div class="cart">
+      <h2>Your Cart</h2>
+      <ul id="cartItems"></ul>
+      <button id="confirmOrderButton" onclick="showOrderForm()">Proceed to Checkout</button>
+    </div>
+    <form id="orderForm" style="display: none;">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+      <label for="address">Address:</label>
+      <input type="text" id="address" name="address" required>
+      <label for="phone">Phone No.:</label>
+      <input type="text" id="phone" name="phone" required>
+      <button type="submit">Submit Order</button>
+    </form>
+  </div>
+  <footer>
+    <p>&copy; 2024 Bakery Delight</p>
+    <p>Shreyas Shetty</p>
+  </footer>
+  <script src="/js/main.js"></script>
+</body>
+</html>
